@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .main_container {
+        font-family: Arial, sans-serif;
+        /* margin: 20px; */
+    }
+   
+    .card_product {
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+        /* border: 1px solid #ccc; */
+        /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+        /* border-radius: 8px; */
+        max-width: 600px;
+        margin: auto;
+        margin-bottom: 0.5cm;
+    }
+
+    .img_product {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .info_container {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .name_product {
+        margin: 0;
+        font-size: 1.1em;
+    }
+
+    .product_ingredient {
+        color: #666;
+        font-size: 0.9em;
+    }
+
+    .price_product {
+        font-size: 1.1em;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .observations {
+        width: 90%;
+        height: 2cm;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        resize: none;
+    }
+
+    .quantity_container {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .minus_button {
+        background-color: #ddd;
+        border: none;
+        padding: 6px 12px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .more_button {
+        background-color: #ddd;
+        border: none;
+        padding: 6px 12px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .amount {
+        margin: 0 12px;
+        font-size: 1em;
+    }
+
+    #order_container {
+        width: -webkit-fill-available;
+        position: fixed;
+        justify-content: space-between;
+        align-items: center;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-areas: 'total enviar';
+        padding: 10px 20px;
+        background-color: white;
+        box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.237);
+        border-radius: 8px 8px 0 0;
+    }
+
+    .button_pedido {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+     /* fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff */
+     header{
+        margin-bottom: 3cm;
+     }
+     #navbar {        
+        overflow: hidden;
+        background-color: #fff;
+    }
+
+
+    .generic_section {
+        /* width: 70%; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #section_navigation_index_horizontal {
+        position: relative;
+        top: 0;
+        border-bottom: solid 3px #28a745;
+        justify-content: space-around;
+    }
+
+    #section_navigation_index_horizontal a {
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: 1.5cm;
+    }
+
+    .container_items_navegation {
+        display: flex;
+        width: 100%;
+    }
+    .container_items_navegation a {
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+
+    .link {
+        color: initial;
+        /* Color inicial del enlace */
+    }
+
+    .link.active {
+        color: #017dc7 !important;
+        /* Color cuando el enlace está activo */
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        /* Asegúrate de que el navbar esté por encima del contenido */
+    }
+
+    /* .sticky+.content */
+    .sticky {
+        /* padding-top: 60px; */
+    }
+
+
+    section {
+        padding: 10px 0;
+    }
+</style>
+
+<body>
+    <header>
+        <div id="navbar">
+            <section class="generic_section" id="section_navigation_index_horizontal">
+                <div id="defaultContainerItemsNavViewPart" class="container_items_navegation">
+                    <a id="defaultBtnNavegation1ViewPart" href="#id_about" class="link">Bebidas</a>
+                    <a id="defaultBtnNavegation4ViewPart" href="#article_page_tab" class="link">hamburguesas</a>
+                    <a id="defaultBtnNavegation5ViewPart" href="#id_data_work_team" class="link">Promociones</a>
+                    <a id="defaultBtnNavegation6ViewPart" href="#data_testimonials" class="link">Otros</a>
+                </div>
+            </section>
+        </div>
+    </header>
+    <main class="main_container">
+        <article class="menu_container">
+            <section class="card_product">
+                <div>
+                    <img src="hamburguesa.jpg" alt="moustro producto" class="img_product">
+                </div>
+                <div class="info_container">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div>
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card_product">
+                <div>
+                    <img src="hamburguesa.jpg" alt="moustro producto" class="img_product">
+                </div>
+                <div class="info_container">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div>
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card_product">
+                <div>
+                    <img src="hamburguesa.jpg" alt="moustro producto" class="img_product">
+                </div>
+                <div class="info_container">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div>
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+        <section id="order_container">
+            <div style="grid-area: total;">
+                <span style="font-weight: bold;">TOTAL:</span>
+                <span style="font-size: 1.2em; margin-left: 10px;">$10.000</span>
+            </div>
+            <div style="grid-area: enviar; text-align: right;">
+                <button class="button_pedido"> Hacer pedido</button>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+
+    </footer>
+</body>
+
+<script>
+    window.onscroll = function () { myFunction2(); };
+    var navbar = document.getElementById("navbar");
+    function myFunction2() {
+        var sticky = navbar.offsetTop;
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {          
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    function handleClick(e) {
+        const link = e.target.closest('a');
+
+        if (link?.tagName === 'A' && link.getAttribute('href')?.startsWith('#')) {
+            e.preventDefault();
+
+            // Desactivar la clase active de todos los enlaces
+            navLinks.forEach(navLink => navLink.classList.remove('active'));
+
+            // Activar la clase active en el enlace clicado
+            link.classList.add('active');
+
+            const targetElement = document.getElementById(link.getAttribute('href').substring(1));
+
+            if (targetElement && navbar) {
+                const navbarHeight = navbar.offsetHeight;
+                const targetPosition = targetElement.offsetTop;
+                const scrollPosition = targetPosition - (navbar.classList.contains('sticky') ? 0 : navbarHeight);
+                console.log('scrollPosition: ', scrollPosition);
+                window.scrollTo({
+                    top: scrollPosition - 55,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+
+    document.removeEventListener('click', handleClick); // Eliminar el listener de clic si ya existe para evitar duplicados
+    document.addEventListener('click', handleClick); // Adjuntar el listener de clic
+
+    // Intersection Observer para cambiar el color del enlace cuando la sección es visible
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.link');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Ajusta el umbral según tus necesidades
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Desactivar la clase active de todos los enlaces
+                navLinks.forEach(navLink => navLink.classList.remove('active'));
+
+                // Activar la clase active en el enlace correspondiente
+                const id = entry.target.getAttribute('id');
+                const navLink = document.querySelector(`a[href="#${id}"]`);
+                if (navLink) {
+                    navLink.classList.add('active');
+                }
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+
+</script>
+
+</html>
