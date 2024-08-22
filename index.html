@@ -7,16 +7,16 @@
     <title>Document</title>
 </head>
 <style>
-
     body {
         margin: 0;
-        padding: 0;        
+        padding: 0;
     }
+
     .main_container {
         font-family: Arial, sans-serif;
         margin: 5px;
     }
-   
+
     .card_product {
         display: grid;
         grid-template-areas: 'img' 'info';
@@ -37,14 +37,14 @@
         overflow: hidden;
         /* border-radius: 8px 0 0 8px; */
     }
-    
-    .img_product {        
+
+    .img_product {
         width: 100%;
-        height: 100%;        
+        height: 100%;
         object-fit: cover;
     }
 
-    .info_container {                
+    .info_container {
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -108,19 +108,37 @@
         font-size: 1em;
     }
 
+
+
     #order_container {
         width: -webkit-fill-available;
         position: fixed;
         justify-content: space-between;
         align-items: center;
         right: 0;
-        bottom: 0;
-        display: grid;
+        bottom: 0;        
         grid-template-areas: 'total enviar';
         padding: 10px 20px;
         background-color: white;
         box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.237);
         border-radius: 8px 8px 0 0;
+        animation: slideUp 0.3s ease-out; /* Aplica la animación */        
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: translateY(100%);
+            /* Empieza desde abajo */
+            opacity: 0;
+            /* Inicialmente invisible */
+        }
+
+        100% {
+            transform: translateY(0);
+            /* Llega a su posición original */
+            opacity: 1;
+            /* Totalmente visible */
+        }
     }
 
     .button_pedido {
@@ -133,11 +151,12 @@
         cursor: pointer;
     }
 
-     /*#region navbar */
-     header{
+    /*#region navbar */
+    header {
         margin-bottom: 0.5cm;
-     }
-     #navbar {        
+    }
+
+    #navbar {
         overflow: hidden;
         background-color: #fff;
     }
@@ -177,6 +196,7 @@
         padding: 0 15px;
         justify-content: space-between;
     }
+
     .container_items_navegation a {
         text-decoration: none;
         font-size: 1em;
@@ -204,7 +224,7 @@
     .sticky {
         /* padding-top: 60px; */
     }
-    
+
     /* #endregion navbar */
 </style>
 
@@ -224,7 +244,7 @@
     <main class="main_container">
         <article class="menu_container" id="hamburguesas">
             <h1 style="margin-top: 2cm;">hamburguesas</h1>
-            <section class="card_product" >
+            <section class="card_product">
                 <div class="img_container">
                     <img src="hamburguesa.jpg" alt="moustro producto" class="img_product">
                 </div>
@@ -243,11 +263,11 @@
                         <div class="quantity_container">
                             <button class="minus_button">-</button>
                             <span class="amount">1</span>
-                            <button class="more_button">+</button>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
                         </div>
                     </div>
                 </div>
-            </section>          
+            </section>
             <section class="card_product">
                 <div class="img_container">
                     <img src="hamburguesa.jpg" alt="moustro producto" class="img_product">
@@ -271,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-            </section>          
+            </section>
             <section class="card_product">
                 <div class="img_container">
                     <img src="hamburguesa.jpg" alt="moustro producto" class="img_product">
@@ -295,7 +315,7 @@
                         </div>
                     </div>
                 </div>
-            </section>          
+            </section>
             <section class="card_product">
                 <div class="img_container">
                     <img src="hamburguesa.jpg" alt="moustro producto" class="img_product">
@@ -319,36 +339,12 @@
                         </div>
                     </div>
                 </div>
-            </section>          
+            </section>
 
         </article>
 
         <article class="menu_container" id="bebidas">
             <h1 style="margin-top: 2cm;">Bebidas</h1>
-            <section class="card_product" >
-                <div class="img_container">
-                    <img src="cola.jpg" alt="moustro producto" class="img_product">
-                </div>
-                <div class="info_container">
-                    <div>
-                        <h3 class="name_product">Nombre del Producto</h3>
-                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.</p>
-                    </div>
-                    <h3 class="price_product">$ 10.000</h3>
-                    <span>Observación: </span>
-                    <textarea class="observations" name="observation" id="observation"
-                        placeholder="Ingrese aquí observación"></textarea>
-                    <div>
-                        <span>Cantidad:</span>
-                        <div class="quantity_container">
-                            <button class="minus_button">-</button>
-                            <span class="amount">1</span>
-                            <button class="more_button">+</button>
-                        </div>
-                    </div>
-                </div>
-            </section>          
             <section class="card_product">
                 <div class="img_container">
                     <img src="cola.jpg" alt="moustro producto" class="img_product">
@@ -372,7 +368,7 @@
                         </div>
                     </div>
                 </div>
-            </section>          
+            </section>
             <section class="card_product">
                 <div class="img_container">
                     <img src="cola.jpg" alt="moustro producto" class="img_product">
@@ -396,7 +392,7 @@
                         </div>
                     </div>
                 </div>
-            </section>          
+            </section>
             <section class="card_product">
                 <div class="img_container">
                     <img src="cola.jpg" alt="moustro producto" class="img_product">
@@ -420,11 +416,35 @@
                         </div>
                     </div>
                 </div>
-            </section>          
+            </section>
+            <section class="card_product">
+                <div class="img_container">
+                    <img src="cola.jpg" alt="moustro producto" class="img_product">
+                </div>
+                <div class="info_container">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div>
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </article>
 
-        <section id="order_container">
+        <section id="order_container" style="display: none;">
             <div style="grid-area: total;">
                 <span style="font-weight: bold;">TOTAL:</span>
                 <span style="font-size: 1.2em; margin-left: 10px;">$10.000</span>
@@ -434,21 +454,31 @@
             </div>
         </section>
     </main>
-
-
     <footer>
 
     </footer>
 </body>
 
 <script>
+    function pedido(contenedor) {
+        const element = document.getElementById(contenedor)        
+        if (element.style.display == 'none') {
+            element.style.display = 'grid';
+            console.log(element.style.display);                        
+        } else {
+            element.style.display = 'none'
+        }
+        
+        
+    }
+
     window.onscroll = function () { myFunction2(); };
     var navbar = document.getElementById("navbar");
     function myFunction2() {
         var sticky = navbar.offsetTop;
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky");
-        } else {          
+        } else {
             navbar.classList.remove("sticky");
         }
     }
