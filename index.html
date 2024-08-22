@@ -57,6 +57,7 @@
     }
 
     .product_ingredient {
+        margin: 3px 0;
         color: #878787;
         font-size: 0.9em;
     }
@@ -154,7 +155,7 @@
     #section_navigation_index_horizontal {
         position: relative;
         top: 0;
-        border-bottom: solid 3px #28a745;
+        border-bottom: solid 3px #ff0000;
         justify-content: space-around;
     }
 
@@ -187,7 +188,7 @@
     }
 
     .link.active {
-        color: #017dc7 !important;
+        color: #ff0000 !important;
         /* Color cuando el enlace está activo */
     }
 
@@ -483,7 +484,7 @@
     document.addEventListener('click', handleClick); // Adjuntar el listener de clic
 
     // Intersection Observer para cambiar el color del enlace cuando la sección es visible
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('article');
     const navLinks = document.querySelectorAll('.link');
 
     const observerOptions = {
