@@ -26,7 +26,7 @@
     .card_product {
 
         display: grid;
-
+        /* grid-template-columns: 3fr 4fr; */
         /* border: 1px solid #ccc; */
         /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
         /* border-radius: 8px; */
@@ -39,16 +39,13 @@
 
     .img_container {
         width: 100%;
-        height: 7cm;
+        /* height: 6cm; */
         overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         /* border-radius: 8px 0 0 8px; */
     }
 
     .img_product {
-        /* width: 100%; */
+        width: 100%;
         height: 100%;
         object-fit: cover;
     }
@@ -78,31 +75,22 @@
     }
 
     .observations {
-        width: auto;
-        /* width: 90%; */
+        width: 90%;
         height: 1.1cm;
         font-family: 'Poppins', sans-serif;
-        background-color: #f9f9f960;
-        /* Color de fondo del textarea */
-        color: #fff;
-        /* Cambia el color del texto */
-        border: 1px solid #fff;
-        /* Bordes personalizados */
-        border-radius: 5px;
-        /* Bordes redondeados */
-        padding: 10px;
-        /* Espaciado interno */
-        resize: none;
-        /* Desactiva el redimensionamiento */
+        background-color: #f9f9f960; /* Color de fondo del textarea */
+        color: #fff; /* Cambia el color del texto */
+        border: 1px solid #fff; /* Bordes personalizados */
+        border-radius: 5px; /* Bordes redondeados */
+        padding: 10px; /* Espaciado interno */
+        resize: none; /* Desactiva el redimensionamiento */
         margin-bottom: 8px;
     }
 
     .observations::placeholder {
         font-size: 13px;
-        color: #ffffff7c;
-        /* Cambia el color del texto */
+        color: #ffffff7c; /* Cambia el color del texto */
     }
-
     .observations:focus {
         outline: none;
         /* Quitar el borde al hacer clic */
@@ -278,7 +266,7 @@
             <section class="generic_section" id="section_navigation_index_horizontal">
                 <div id="defaultContainerItemsNavViewPart" class="container_items_navegation">
                     <a id="defaultBtnNavegation4ViewPart" href="#hamburguesas" class="link">Hamburguesas</a>
-                    <a id="defaultBtnNavegation1ViewPart" href="#bebidas" class="link">Bebidas</a>
+                    <a id="defaultBtnNavegation1ViewPart" href="#category2" class="link">Bebidas</a>
                     <a id="defaultBtnNavegation5ViewPart" href="#id_data_work_team" class="link">Promociones</a>
                     <a id="defaultBtnNavegation6ViewPart" href="#data_testimonials" class="link">Otros</a>
                 </div>
@@ -288,55 +276,7 @@
     <main class="main_container">
         <article class="menu_container" id="hamburguesas">
             <h1 style="margin-top: 2cm;">Categoría #1</h1>
-            <section class="card_product" style="grid-template-columns: 3fr 4fr;">
-                <div class="img_container" style="height: auto;">
-                    <img src="png 5.png" alt="moustro producto" class="img_product" style="width: 100%; height: auto;">
-                </div>
-                <div class="info_container" style="padding: 5px;">
-                    <div>
-                        <h3 class="name_product">Nombre del Producto</h3>
-                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.</p>
-                    </div>
-                    <h3 class="price_product">$ 10.000</h3>
-                    <span>Observación: </span>
-                    <textarea class="observations" name="observation" id="observation"
-                        placeholder="Ingrese aquí observación"></textarea>
-                    <div class="mount_container">
-                        <span>Cantidad:</span>
-                        <div class="quantity_container">
-                            <button class="minus_button">-</button>
-                            <span class="amount">1</span>
-                            <button class="more_button" onclick="pedido('order_container')">+</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="card_product">
-                <div class="img_container">
-                    <img src="png 3.png" alt="moustro producto" class="img_product">
-                </div>
-                <div class="info_container">
-                    <div>
-                        <h3 class="name_product">Nombre del Producto</h3>
-                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.</p>
-                    </div>
-                    <h3 class="price_product">$ 10.000</h3>
-                    <span>Observación: </span>
-                    <textarea class="observations" name="observation" id="observation"
-                        placeholder="Ingrese aquí observación"></textarea>
-                    <div class="mount_container">
-                        <span>Cantidad:</span>
-                        <div class="quantity_container">
-                            <button class="minus_button">-</button>
-                            <span class="amount">1</span>
-                            <button class="more_button" onclick="pedido('order_container')">+</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="card_product">
+            <section class="card_product" style="grid-template-columns: 3fr 4fr; ">
                 <div class="img_container">
                     <img src="png 5.png" alt="moustro producto" class="img_product">
                 </div>
@@ -361,6 +301,130 @@
                 </div>
             </section>
             <section class="card_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 3.png" alt="moustro producto" class="img_product" style="width: auto;">
+                </div>
+                <div class="info_container" style="padding: 2px;">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div class="mount_container">
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 5.png" alt="moustro producto" class="img_product" style="width: auto;">
+                </div>
+                <div class="info_container" style="padding: 2px;">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div class="mount_container">
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 5.png" alt="moustro producto" class="img_product" style="width: auto;">
+                </div>
+                <div class="info_container" style="padding: 2px;">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div class="mount_container">
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 3.png" alt="moustro producto" class="img_product" style="width: auto;">
+                </div>
+                <div class="info_container" style="padding: 2px;">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div class="mount_container">
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 5.png" alt="moustro producto" class="img_product" style="width: auto;">
+                </div>
+                <div class="info_container" style="padding: 2px;">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div class="mount_container">
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+        <article class="menu_container" id="category2">
+            <h1 style="margin-top: 2cm;">Categoría #2</h1>
+            <section class="card_product" style="grid-template-columns: 3fr 4fr; ">
                 <div class="img_container">
                     <img src="png 5.png" alt="moustro producto" class="img_product">
                 </div>
@@ -385,10 +449,10 @@
                 </div>
             </section>
             <section class="card_product">
-                <div class="img_container">
-                    <img src="png 5.png" alt="moustro producto" class="img_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 3.png" alt="moustro producto" class="img_product" style="width: auto;">
                 </div>
-                <div class="info_container">
+                <div class="info_container" style="padding: 2px;">
                     <div>
                         <h3 class="name_product">Nombre del Producto</h3>
                         <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -396,7 +460,7 @@
                     </div>
                     <h3 class="price_product">$ 10.000</h3>
                     <span>Observación: </span>
-                    <textarea class="observations" name="observation" id="observation"
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
                         placeholder="Ingrese aquí observación"></textarea>
                     <div class="mount_container">
                         <span>Cantidad:</span>
@@ -408,6 +472,103 @@
                     </div>
                 </div>
             </section>
+            <section class="card_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 5.png" alt="moustro producto" class="img_product" style="width: auto;">
+                </div>
+                <div class="info_container" style="padding: 2px;">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div class="mount_container">
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 5.png" alt="moustro producto" class="img_product" style="width: auto;">
+                </div>
+                <div class="info_container" style="padding: 2px;">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div class="mount_container">
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 3.png" alt="moustro producto" class="img_product" style="width: auto;">
+                </div>
+                <div class="info_container" style="padding: 2px;">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div class="mount_container">
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card_product">
+                <div class="img_container" style="height: 6cm; display: flex; align-items: center; justify-content: center;">
+                    <img src="png 5.png" alt="moustro producto" class="img_product" style="width: auto;">
+                </div>
+                <div class="info_container" style="padding: 2px;">
+                    <div>
+                        <h3 class="name_product">Nombre del Producto</h3>
+                        <p class="product_ingredient">Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <h3 class="price_product">$ 10.000</h3>
+                    <span>Observación: </span>
+                    <textarea class="observations" name="observation" id="observation" style="width: auto;"
+                        placeholder="Ingrese aquí observación"></textarea>
+                    <div class="mount_container">
+                        <span>Cantidad:</span>
+                        <div class="quantity_container">
+                            <button class="minus_button">-</button>
+                            <span class="amount">1</span>
+                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </article>
 
         <section id="order_container" style="display: none;">
