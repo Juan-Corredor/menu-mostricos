@@ -103,7 +103,7 @@ body {
     margin-top: 20px;
     grid-template-areas: 'label amound';
     justify-content: space-between;
-
+    align-items: center;
 }
 /* #endregion STYLES product-card */
 
@@ -283,7 +283,7 @@ header {
 .generic_section {
     /* width: 70%; */
     width: 100%;
-    height: 100%;|
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
