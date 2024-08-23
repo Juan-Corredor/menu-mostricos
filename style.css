@@ -105,6 +105,17 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.product-card__info-container_amount__quantity-container {
+    background-color: #d4bffe;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
 /* #endregion STYLES product-card */
 
 
@@ -203,7 +214,7 @@ body {
     border-radius: 35px;
     background-color: #fff;
     border: none;
-    padding: 6px 12px;
+    /* padding: 6px 12px; */
     font-size: 1em;
     cursor: pointer;
 
@@ -215,7 +226,7 @@ body {
     border-radius: 35px;
     background-color: #fff;
     border: none;
-    padding: 6px 12px;
+    /* padding: 6px 12px; */
     font-size: 1em;
     cursor: pointer;
 }
