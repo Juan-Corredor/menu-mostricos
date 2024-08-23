@@ -6,16 +6,17 @@ body {
 
 }
 
-.main_container {
+.main_container {    
     font-family: Arial, sans-serif;
     color: #fff;    
+    margin: 0 15px;
 }
 
 /* #region STYLES product-card */
 .product-card {
     display: grid;
     grid-template-areas: 'img' 'info';        
-    margin: 0 15px;
+    
     margin-bottom: 0.5cm;
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;

@@ -25,7 +25,7 @@
     </header>
     <main class="main_container">
         <article class="menu-category__container" id="hamburguesas">
-            <h1>Categoría #1</h1>
+            <h1 class="style-title-category">Categoría #1</h1>
 
             <section class="product-card">
                 <div class="product-card__image-container">
@@ -54,7 +54,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="product-card">
                 <div class="product-card__image-container">
                     <img src="png 3.png" alt="img product" class="product-card__image-container__img">
@@ -74,14 +73,16 @@
                     </div>
                     <div class="product-card__info-container_amount">
                         <label>Cantidad:</label>
-                        <div class="product-card__quantity-container">
-                            <button class="minus_button">-</button>
+                        <div class="product-card__info-container_amount__quantity-container">
+                            <button class="minus_button"><i class="bi bi-dash-lg"></i></button>
                             <span class="amount">1</span>
-                            <button class="more_button" onclick="pedido('order_container')">+</button>
+                            <button class="more_button" onclick="pedido('order_container')"><i class="bi bi-plus-lg"></i></button>
                         </div>
                     </div>
                 </div>
             </section>
+
+           
 
 
             <!-- <section class="card_product" style="grid-template-columns: 3fr 4fr; ">
