@@ -14,7 +14,7 @@
         margin: 0;
         padding: 0;
         background-color: #6b39cc;
-       
+
     }
 
     .main_container {
@@ -24,8 +24,8 @@
     }
 
     .card_product {
-        
-        display: grid;        
+
+        display: grid;
         grid-template-columns: 3fr 4fr;
         /* border: 1px solid #ccc; */
         /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
@@ -91,6 +91,13 @@
         margin-left: 3px;
     }
 
+    .mount_container {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .minus_button {
         width: 35px;
         height: 35px;
@@ -100,7 +107,7 @@
         padding: 6px 12px;
         font-size: 1em;
         cursor: pointer;
-        
+
     }
 
     .more_button {
@@ -127,13 +134,14 @@
         justify-content: space-between;
         align-items: center;
         right: 0;
-        bottom: 0;        
+        bottom: 0;
         grid-template-areas: 'total enviar';
         padding: 10px 20px;
         background-color: white;
         box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.237);
         border-radius: 8px 8px 0 0;
-        animation: slideUp 0.3s ease-out; /* Aplica la animación */        
+        animation: slideUp 0.3s ease-out;
+        /* Aplica la animación */
     }
 
     @keyframes slideUp {
@@ -189,9 +197,9 @@
         border-bottom: solid 3px #fcba1b;
         justify-content: space-around;
     }
-    
+
     #section_navigation_index_horizontal a {
-        color: #fff;        
+        color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -271,7 +279,7 @@
                     <span>Observación: </span>
                     <textarea class="observations" name="observation" id="observation"
                         placeholder="Ingrese aquí observación"></textarea>
-                    <div>
+                    <div class="mount_container">
                         <span>Cantidad:</span>
                         <div class="quantity_container">
                             <button class="minus_button">-</button>
@@ -474,15 +482,15 @@
 
 <script>
     function pedido(contenedor) {
-        const element = document.getElementById(contenedor)        
+        const element = document.getElementById(contenedor)
         if (element.style.display == 'none') {
             element.style.display = 'grid';
-            console.log(element.style.display);                        
+            console.log(element.style.display);
         } else {
             element.style.display = 'none'
         }
-        
-        
+
+
     }
 
     window.onscroll = function () { myFunction2(); };
