@@ -1,0 +1,340 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6b39cc;
+
+}
+
+.main_container {
+    font-family: Arial, sans-serif;
+    color: #fff;    
+}
+
+/* #region STYLES product-card */
+.product-card {
+    display: grid;
+    grid-template-areas: 'img' 'info';        
+    margin: 0 15px;
+    margin-bottom: 0.5cm;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+
+    
+}
+.product-card__image-container {
+    grid-area: 'img';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;    
+    height: 6cm;
+    overflow: hidden;
+}
+
+.product-card__image-container__img {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+}
+
+.product-card__info-container {
+    grid-area: 'info';
+}
+
+.product-card__info-container_header {
+    display: grid; 
+    grid-template-areas: 'name price'; 
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.product-card__info-container_header h3{
+    padding: 0;
+    margin: 0;
+}
+
+.product-card__ingredients {
+    margin: 0;
+    padding: 4% 0;
+    font-size: 16px;
+    color: #d4bffe;
+    text-align: justify;
+}
+
+.product-card__info-container_observation {
+    display: grid;
+    margin: 10px 0;
+}
+
+.product-card__observations {
+    width: auto;
+    height: 1.1cm;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f960; /* Color de fondo del textarea */
+    color: #fff; /* Cambia el color del texto */
+    border: 1px solid #fff; /* Bordes personalizados */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    resize: none; /* Desactiva el redimensionamiento */
+    margin-top: 8px;   
+}
+
+.product-card__observations::placeholder {
+    font-size: 13px;
+    color: #ffffff7c; /* Cambia el color del texto */
+}
+.product-card__observations:focus {
+    outline: none;
+    /* Quitar el borde al hacer clic */
+}
+
+.product-card__info-container_amount {
+    display: grid;
+    margin-top: 20px;
+    grid-template-areas: 'label amound';
+    justify-content: space-between;
+
+}
+/* #endregion STYLES product-card */
+
+
+
+
+
+.card_product {
+
+    display: grid;
+    /* grid-template-columns: 3fr 4fr; */
+    /* border: 1px solid #ccc; */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    /* border-radius: 8px; */
+    /* max-width: 600px; */
+    margin: auto;
+    margin-bottom: 0.5cm;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.img_container {
+    width: 100%;
+    /* height: 6cm; */
+    overflow: hidden;
+    /* border-radius: 8px 0 0 8px; */
+}
+
+.img_product {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info_container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name_product {
+    margin: 0;
+    font-size: 17px;
+}
+
+.product_ingredient {
+    margin: 3px 0;
+    color: #d4bffe;
+    font-size: 0.9em;
+}
+
+.price_product {
+    font-size: 17px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.observations {
+    width: 90%;
+    height: 1.1cm;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f960; /* Color de fondo del textarea */
+    color: #fff; /* Cambia el color del texto */
+    border: 1px solid #fff; /* Bordes personalizados */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    resize: none; /* Desactiva el redimensionamiento */
+    margin-bottom: 8px;
+}
+
+.observations::placeholder {
+    font-size: 13px;
+    color: #ffffff7c; /* Cambia el color del texto */
+}
+.observations:focus {
+    outline: none;
+    /* Quitar el borde al hacer clic */
+}
+
+.quantity_container {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 3px;
+}
+
+.mount_container {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.minus_button {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background-color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1em;
+    cursor: pointer;
+
+}
+
+.more_button {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background-color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.amount {
+    margin: 0 12px;
+    font-size: 1em;
+}
+
+
+
+#order_container {
+    width: -webkit-fill-available;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+    grid-template-areas: 'total enviar';
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.237);
+    border-radius: 8px 8px 0 0;
+    animation: slideUp 0.3s ease-out;
+    /* Aplica la animación */
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        /* Empieza desde abajo */
+        opacity: 0;
+        /* Inicialmente invisible */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Llega a su posición original */
+        opacity: 1;
+        /* Totalmente visible */
+    }
+}
+
+.button_pedido {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/*#region navbar */
+header {
+    margin-bottom: 0.5cm;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+
+.generic_section {
+    /* width: 70%; */
+    width: 100%;
+    height: 100%;|
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section_navigation_index_horizontal {
+    background-color: #6b39cc;
+    position: relative;
+    top: 0;
+    border-bottom: solid 3px #fcba1b;
+    justify-content: space-around;
+}
+
+#section_navigation_index_horizontal a {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* width: 100%; */
+    padding: 0;
+    margin: 0;
+    height: 1.5cm;
+}
+
+.container_items_navegation {
+    display: flex;
+    width: 100%;
+    padding: 0 5px;
+    justify-content: space-between;
+}
+
+.container_items_navegation a {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.link {
+    color: initial;
+    /* Color inicial del enlace */
+}
+
+.link.active {
+    font-weight: bold;
+    color: #fcba1b !important;
+    /* Color cuando el enlace está activo */
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Asegúrate de que el navbar esté por encima del contenido */
+}
+
+/* .sticky+.content */
+.sticky {
+    /* padding-top: 60px; */
+}
+
+/* #endregion navbar */
