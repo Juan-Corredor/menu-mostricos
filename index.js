@@ -10,17 +10,6 @@ function pedido(contenedor) {
 
 }
 
-window.onscroll = function () { myFunction2(); };
-var navbar = document.getElementById("navbar");
-function myFunction2() {
-    var sticky = navbar.offsetTop;
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-    } else {
-        navbar.classList.remove("sticky");
-    }
-}
-
 function handleClick(e) {
     const link = e.target.closest('a');
 
