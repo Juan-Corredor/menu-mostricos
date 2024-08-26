@@ -6,8 +6,6 @@ function pedido(contenedor) {
     } else {
         element.style.display = 'none'
     }
-
-
 }
 
 function handleClick(e) {
