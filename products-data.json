@@ -3,7 +3,7 @@
     "categorys": [
         {
             "name": "Hamburguesas",
-            "idCategory": "hamburguesas",
+            "categoryId": "hamburguesas",
             "products": [
                 {
                     "idProduc": "combo1",
@@ -30,7 +30,7 @@
         },
         {
             "name": "Bebidas",
-            "idCategory": "bebidas",
+            "categoryId": "bebidas",
             "products": [
                 {
                     "idProduc": "bebida01",

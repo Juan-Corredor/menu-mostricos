@@ -7,31 +7,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Menu Mostricos</title>
 </head>
+<style>
+   #navbar {
+        overflow: hidden;
+        padding: 0;
+        background-color: #6b39cc;
+    }
 
+    .nav-section {        
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: auto;
+        position: relative;
+        border-bottom: solid 3px #fcba1b;
+    }
+
+    .nav-section a {
+        width: 100%;
+        height: 1.5cm;
+        padding: 0 13px;
+        font-size: 15px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .link {
+        color: initial;
+    }
+
+    .link.active {
+        color: #fcba1b !important;
+    }
+
+    .sticky {
+        top: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 1000; /* Asegúrate de que el navbar esté por encima del contenido */
+    }
+    
+    .sticky {
+        padding-top: 60px;
+    }  
+</style>
 <body>
-    <header>
-        <div id="navbar">
-            <section class="generic_section" id="section_navigation_index_horizontal">
-                <div id="defaultContainerItemsNavViewPart" class="container_items_navegation">
-                    <a id="defaultBtnNavegation4" href="#hamburguesas" class="link">Hamburguesas</a>
-                    <a id="defaultBtnNavegation1" href="#bebidas" class="link">Bebidas</a>
-                    <a id="defaultBtnNavegation5" href="#promociones" class="link">Promociones</a>
-                    <a id="defaultBtnNavegation6" href="#otros" class="link">Salchipapa</a>
-                    <a id="defaultBtnNavegation6" href="#otros" class="link">Carnes</a>
-                    <a id="defaultBtnNavegation6" href="#otros" class="link">Postres</a>
-                    <a id="defaultBtnNavegation6" href="#otros" class="link">Otros</a>
-                </div>
-            </section>
-        </div>
-    </header>
-
+    <nav id="navbar" class="sticky">
+        <section id="nav-section-menu" class="nav-section">
+            <a id="defaultBtnNavegation1" href="#" class="link">Hamburguesas</a>
+            <a id="defaultBtnNavegation2" href="#" class="link">Bebidas</a>
+            <a id="defaultBtnNavegation3" href="#" class="link">Salchipapas</a>
+            <a id="defaultBtnNavegation4" href="#" class="link">Promociones</a>
+            <a id="defaultBtnNavegation5" href="#" class="link">Postres</a>
+            <a id="defaultBtnNavegation6" href="#" class="link">Otros</a>
+        </section> 
+    </nav>
+    
     <main class="main_container"  id="main_container">
-        <article id="category-contaniner">
-            <h1 class="tittle-category"></h1>
-        </article>
-
+        <article id="category-container"> <h1 class="tittle-category"></h1></article>
+        
         <section class="order-container" id="order_container" style="display: none;">
             <div class="order-container__total-container" style="grid-area: total;">
                 <span style="font-weight: bold;">TOTAL:</span>
@@ -42,22 +86,8 @@
             </div>
         </section>
     </main>
-
+    
     <script src="setProducts.js"></script>
     <script src="index.js"></script>
 </body>
-<script>
-    window.onscroll = function () { scrollActive(); };
-    let navbar = document.getElementById("navbar");
-
-    function scrollActive() {
-        let sticky = navbar.offsetTop;
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky");
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
-</script>
-
 </html>

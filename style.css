@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #6b39cc;
-
 }
 
 .main_container {    
@@ -11,7 +10,6 @@ body {
     color: #fff;    
     margin: 0 15px;
 }
-
 
 /* #region STYLES product-card */
 .product-card {
@@ -154,7 +152,6 @@ body {
     color: white;
     cursor: pointer;
 }
-/* #endregion STYLES product-card */
 
 .minus_button {
     width: 35px;
@@ -181,77 +178,4 @@ body {
     margin: 0 12px;
     font-size: 1em;
 }
-
-/*#region navbar */
-header {
-    margin-bottom: 2cm;
-}
-
-#navbar {
-    overflow: hidden;
-    background-color: #fff;
-}
-
-
-.generic_section {
-    /* width: 70%; */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#section_navigation_index_horizontal {
-    background-color: #6b39cc;
-    position: relative;
-    top: 0;
-    border-bottom: solid 3px #fcba1b;
-    justify-content: space-around;
-}
-
-#section_navigation_index_horizontal a {
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    /* width: 100%; */
-    padding: 0 10px;
-    margin: 0;
-    height: 1.5cm;
-}
-
-.container_items_navegation {
-    display: flex;
-    width: 100%;
-    padding: 0 5px;
-    justify-content: space-between;
-    overflow: auto;
-}
-
-.container_items_navegation a {
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.link {
-    color: initial;
-    /* Color inicial del enlace */
-}
-
-.link.active {
-    font-weight: bold;
-    color: #fcba1b !important;
-    /* Color cuando el enlace está activo */
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    /* Asegúrate de que el navbar esté por encima del contenido */
-}
-
-/* #endregion navbar */
+/* #endregion STYLES product-card */

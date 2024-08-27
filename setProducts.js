@@ -1,24 +1,29 @@
 // Referencia al contenedor donde se agregarán las tarjetas
 const container = document.getElementById('main_container');
-const containerCategory = document.getElementById('category-contaniner');
+const containerCategory = document.getElementById('category-container');
 
 // Función para cargar la plantilla de tarjeta de producto
 async function loadProductCardTemplate() {
-    const response = await fetch('product-card-template.html');
-    const template = await response.text();
-    return template;
+    try {
+        const response = await fetch('product-card-template.html');
+        return await response.text();
+    } catch (error) {
+        console.error('Error loading template:', error);
+    }
 }
 
 // Función para cargar el JSON de productos
 async function loadProductData() {
-    const response = await fetch('products-data.json');
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch('products-data.json');
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading product data:', error);
+    }
 }
 
-// Función para crear una tarjeta de producto
+// Función para crear una categoría
 function createCategory(category, template) {
-    console.log(template, containerCategory);
     // Clona el nodo del elemento original
     const tempDiv = containerCategory.cloneNode(true);
 
@@ -27,9 +32,9 @@ function createCategory(category, template) {
 
     // Crea un nuevo div para envolver el contenido clonado
     const newDiv = document.createElement('div');
-    newDiv.id = category.idCategory;
-    newDiv.className = 'products-contaniner';
-    newDiv.appendChild(tempDiv);  // Agrega el contenido clonado dentro del nuevo div
+    newDiv.id = category.categoryId;
+    newDiv.className = 'products-container';
+    newDiv.appendChild(tempDiv);  //Agrega el contenido clonado dentro del nuevo div
 
     // Agrega el nuevo div al contenedor
     container.appendChild(newDiv);
@@ -37,12 +42,8 @@ function createCategory(category, template) {
     // Elimina el nodo original
     containerCategory.remove();
 
-    const listProducts = category.products;
-    for (let p = 0; p < listProducts.length; p++) {
-        const element = listProducts[p];
-        console.log(element);
-        createProductCard(element, template, tempDiv)
-    }
+    // Crea tarjetas de producto para cada producto de la categoría
+    category.products.forEach(product => createProductCard(product, template, tempDiv));
 }
 
 // Función para crear una tarjeta de producto
@@ -58,7 +59,7 @@ function createProductCard(product, template, container) {
     tempDiv.querySelector('.product-card__name').textContent = product.name;
     tempDiv.querySelector('.product-card__price').textContent = `$ ${formatPrice}`;
     tempDiv.querySelector('.product-card__ingredients').textContent = `Ingredientes: ${product.ingredients}`;
-    tempDiv.querySelector('.product-card__observations').id = `observation-${product.idProduc}`;
+    tempDiv.querySelector('.product-card__observations').id = `observation-${product.productId}`;
 
     // Agregar la tarjeta al contenedor
     container.appendChild(tempDiv.firstElementChild);
