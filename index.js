@@ -39,7 +39,7 @@ document.removeEventListener('click', handleClick); // Eliminar el listener de c
 document.addEventListener('click', handleClick); // Adjuntar el listener de clic
 
 // Intersection Observer para cambiar el color del enlace cuando la sección es visible
-const sections = document.querySelectorAll('article');
+const sections = document.querySelectorAll('.products-contaniner');
 const navLinks = document.querySelectorAll('.link');
 
 const observerOptions = {

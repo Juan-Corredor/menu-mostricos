@@ -3,38 +3,47 @@
     "categorys": [
         {
             "name": "Hamburguesas",
+            "idCategory": "hamburguesas",
             "products": [
                 {
                     "idProduc": "combo1",
                     "imgProduct": "./img/batido.png",
                     "name": "Nombre producto #1",
-                    "price": "100000",
+                    "price": "10000",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
-                },
+                },                
                 {
                     "idProduc": "combo2",
                     "imgProduct": "./img/combo.png",
                     "name": "Nombre producto #2",
-                    "price": "200000",
+                    "price": "20000",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                },
+                {
+                    "idProduc": "combo3",
+                    "imgProduct": "./img/batido.png",
+                    "name": "Nombre producto #3",
+                    "price": "10000",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
                 }
             ]
         },
         {
             "name": "Bebidas",
+            "idCategory": "bebidas",
             "products": [
                 {
                     "idProduc": "bebida01",
                     "imgProduct": "./img/batido.png",
                     "name": "Nombre producto #1",
-                    "price": "150000",
+                    "price": "15000",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
                 },
                 {
                     "idProduc": "bebida02",
                     "imgProduct": "./img/batido.png",
                     "name": "Nombre producto #2",
-                    "price": "220000",
+                    "price": "22000",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
                 }
             ]
