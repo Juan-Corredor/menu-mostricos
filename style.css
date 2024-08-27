@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     color: #fff;
     margin: 0 15px;
+    margin-top: 2cm;
 }
 
 /* #region STYLES product-card */
@@ -189,8 +190,7 @@ body {
 #navbar {
     overflow: hidden;
     padding: 0;
-    background-color: #6b39cc;
-    margin-bottom: 2cm;
+    background-color: #6b39cc; 
 }
 
 .nav-section {
@@ -252,9 +252,4 @@ body {
     z-index: 1000;
     /* Asegúrate de que el navbar esté por encima del contenido */
 }
-
-.sticky {
-    padding-top: 60px;
-}
-
 /* #endregion STYLES NAV-SECTION */

@@ -45,7 +45,7 @@ const navLinks = document.querySelectorAll('.link');
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1 // Ajusta el umbral según tus necesidades
+    threshold: 0.3 // Ajusta el umbral según tus necesidades
 };
 
 const observer = new IntersectionObserver((entries) => {    
