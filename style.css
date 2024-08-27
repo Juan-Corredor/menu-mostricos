@@ -190,6 +190,7 @@ body {
     overflow: hidden;
     padding: 0;
     background-color: #6b39cc;
+    margin-bottom: 2cm;
 }
 
 .nav-section {
@@ -201,7 +202,7 @@ body {
     align-items: center;
     overflow: auto;
     position: relative;
-    border-bottom: solid 1px #fcba1b;
+    /* border-bottom: solid 1px #fcba1b; */
 }
 
 /* Estilo de la barra de desplazamiento */
