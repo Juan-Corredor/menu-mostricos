@@ -97,7 +97,7 @@ body {
     outline: none;
 }
 
-.product-card__info-container_amount {
+.product-card__info-container_quantity {
     display: grid;
     margin-top: 20px;
     grid-template-areas: 'label amound';
@@ -105,7 +105,7 @@ body {
     align-items: center;
 }
 
-.product-card__info-container_amount__quantity-container {
+.product-card__info-container_quantity__quantity-container {
     background-color: #d4bffe;
     border-radius: 15px;
     font-size: 20px;
@@ -158,7 +158,12 @@ body {
     cursor: pointer;
 }
 
-.minus_button {
+.bloqueado {
+    pointer-events: none;
+    opacity: 0.2; /* Indica visualmente que está bloqueado */
+}
+
+.quantity-control {
     width: 35px;
     height: 35px;
     border-radius: 35px;
@@ -168,18 +173,7 @@ body {
     cursor: pointer;
 }
 
-.more_button {
-    width: 35px;
-    height: 35px;
-    border-radius: 35px;
-    background-color: #fff;
-    border: none;
-    /* padding: 6px 12px; */
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.amount {
+.quantity {
     margin: 0 12px;
     font-size: 1em;
 }

@@ -1,33 +1,33 @@
 {
-    "total-amount": "10000",
+    "total-quantity": "10000",
     "categorys": [
         {
             "name": "Hamburguesas",
             "categoryId": "hamburguesas",
             "products": [
                 {
-                    "idProduc": "combo1",
+                    "productId": "combo1",
                     "name": "Nombre producto #1",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/batido.png",
                     "price": 10000,
-                    "amount": 0
+                    "quantity": 0
                 },                
                 {
-                    "idProduc": "combo2",
+                    "productId": "combo2",
                     "name": "Nombre producto #2",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/combo.png",
                     "price": 20000,
-                    "amount": 0
+                    "quantity": 0
                 },
                 {
-                    "idProduc": "combo3",
+                    "productId": "combo3",
                     "name": "Nombre producto #3",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/batido.png",
                     "price": 18000,
-                    "amount": 0
+                    "quantity": 0
                 }
             ]
         },
@@ -36,20 +36,20 @@
             "categoryId": "bebidas",
             "products": [
                 {
-                    "idProduc": "bebida01",
+                    "productId": "bebida01",
                     "name": "Nombre producto #1",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/batido.png",
                     "price": 15000,
-                    "amount": 0
+                    "quantity": 0
                 },
                 {
-                    "idProduc": "bebida02",
+                    "productId": "bebida02",
                     "name": "Nombre producto #2",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/batido.png",
                     "price": 22000,
-                    "amount": 0
+                    "quantity": 0
                 }
             ]
         },
@@ -58,20 +58,20 @@
             "categoryId": "salchipapas",
             "products": [
                 {
-                    "idProduc": "Salchipapas01",
+                    "productId": "Salchipapas01",
                     "name": "Nombre producto #1",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/combo.png",
                     "price": 15000,
-                    "amount": 0
+                    "quantity": 0
                 },
                 {
-                    "idProduc": "Salchipapas02",
+                    "productId": "Salchipapas02",
                     "name": "Nombre producto #2",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/combo.png",
                     "price": 22000,
-                    "amount": 0
+                    "quantity": 0
                 }
             ]
         }
