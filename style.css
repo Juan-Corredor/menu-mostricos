@@ -6,6 +6,8 @@ body {
 }
 
 .main_container {
+    display: grid;
+    justify-content: center;
     font-family: Arial, sans-serif;
     color: #fff;
     margin: 0 15px;
@@ -14,6 +16,7 @@ body {
 
 /* #region STYLES product-card */
 .product-card {
+    max-width: 600px;
     display: grid;
     grid-template-areas: 'img' 'info';
     margin-bottom: 0.5cm;
@@ -163,10 +166,16 @@ body {
     opacity: 0.2; /* Indica visualmente que está bloqueado */
 }
 
+.add-product {
+    background-color: #25D366 !important;
+    color: #fff;
+    font-weight: 900;
+}
+
 .quantity-control {
     width: 35px;
     height: 35px;
-    border-radius: 35px;
+    border-radius: 100%;
     background-color: #fff;
     border: none;
     font-size: 1em;
