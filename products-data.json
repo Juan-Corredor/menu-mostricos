@@ -47,6 +47,26 @@
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
                 }
             ]
+        },
+        {
+            "name": "Salchipapas",
+            "categoryId": "salchipapas",
+            "products": [
+                {
+                    "idProduc": "Salchipapas01",
+                    "imgProduct": "./img/combo.png",
+                    "name": "Nombre producto #1",
+                    "price": "15000",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                },
+                {
+                    "idProduc": "Salchipapas02",
+                    "imgProduct": "./img/combo.png",
+                    "name": "Nombre producto #2",
+                    "price": "22000",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                }
+            ]
         }
     ]
 }

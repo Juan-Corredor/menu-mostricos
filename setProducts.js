@@ -1,3 +1,5 @@
+import { observeNewSection } from './index.js';
+
 // Referencia al contenedor donde se agregarán las tarjetas
 const container = document.getElementById('main_container');
 const containerCategory = document.getElementById('category-container');
@@ -29,21 +31,20 @@ function createCategory(category, template) {
 
     // Modifica el contenido del título dentro del elemento clonado
     tempDiv.querySelector('.tittle-category').textContent = category.name;
-
-    // Crea un nuevo div para envolver el contenido clonado
-    const newDiv = document.createElement('div');
-    newDiv.id = category.categoryId;
-    newDiv.className = 'products-container';
-    newDiv.appendChild(tempDiv);  //Agrega el contenido clonado dentro del nuevo div
+    tempDiv.id = category.categoryId;
+    tempDiv.className = 'products-container';
 
     // Agrega el nuevo div al contenedor
-    container.appendChild(newDiv);
+    container.appendChild(tempDiv);
 
     // Elimina el nodo original
     containerCategory.remove();
 
     // Crea tarjetas de producto para cada producto de la categoría
     category.products.forEach(product => createProductCard(product, template, tempDiv));
+
+    // Observa la nueva sección añadida
+    observeNewSection(tempDiv);
 }
 
 // Función para crear una tarjeta de producto
