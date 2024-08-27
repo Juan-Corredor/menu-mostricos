@@ -201,12 +201,12 @@ body {
     align-items: center;
     overflow: auto;
     position: relative;
-    border-bottom: solid 3px #fcba1b;
+    border-bottom: solid 1px #fcba1b;
 }
 
 /* Estilo de la barra de desplazamiento */
 .nav-section::-webkit-scrollbar {
-    height: 5px;
+    height: 6px;
 }
 
 /* Estilo de la "pista" de la barra de desplazamiento */
@@ -217,14 +217,8 @@ body {
 
 /* Estilo del "pulgar" de la barra de desplazamiento */
 .nav-section::-webkit-scrollbar-thumb {
-    background-color: #533c0750;
-    /* Color del pulgar (la parte que se desplaza) */
-}
-
-/* Estilo del pulgar cuando el usuario lo está activamente usando */
-.nav-section::-webkit-scrollbar-thumb:hover {
     background-color: #fcba1b;
-    /* Color cuando se pasa el ratón por encima */
+    /* Color del pulgar (la parte que se desplaza) */
 }
 
 .nav-section a {
