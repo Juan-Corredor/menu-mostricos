@@ -48,8 +48,7 @@ const observerOptions = {
     threshold: 0.1 // Ajusta el umbral según tus necesidades
 };
 
-const observer = new IntersectionObserver((entries) => {
-    console.log(entries);
+const observer = new IntersectionObserver((entries) => {    
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             // Desactivar la clase active de todos los enlaces
