@@ -1,4 +1,4 @@
-import { observeNewSection } from './index.js';
+import { observeNewSection } from './navigation-features.js';
 
 // Referencia al contenedor donde se agregarán las tarjetas
 const container = document.getElementById('main_container');
