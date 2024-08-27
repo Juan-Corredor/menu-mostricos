@@ -15,8 +15,7 @@ function handleClick(e) {
         if (targetElement && navbar) {
             const navbarHeight = navbar.offsetHeight;
             const targetPosition = targetElement.offsetTop;
-            const scrollPosition = targetPosition - (navbar.classList.contains('sticky') ? 0 : navbarHeight);
-            console.log('scrollPosition: ', scrollPosition);
+            const scrollPosition = targetPosition - (navbar.classList.contains('sticky') ? 0 : navbarHeight);        
             window.scrollTo({
                 top: scrollPosition - 80,
                 behavior: 'smooth'

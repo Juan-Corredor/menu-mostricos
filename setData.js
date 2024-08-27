@@ -49,7 +49,7 @@ function createCategory(category, template) {
 
 // Función para crear una tarjeta de producto
 function createProductCard(product, template, container) {
-    const formatPrice = parseInt(product.price).toLocaleString('es-ES');
+    const formatPrice = product.price.toLocaleString('es-ES');
 
     // Crear un elemento div temporal para contener la plantilla
     const tempDiv = document.createElement('div');
@@ -61,6 +61,7 @@ function createProductCard(product, template, container) {
     tempDiv.querySelector('.product-card__price').textContent = `$ ${formatPrice}`;
     tempDiv.querySelector('.product-card__ingredients').textContent = `Ingredientes: ${product.ingredients}`;
     tempDiv.querySelector('.product-card__observations').id = `observation-${product.productId}`;
+    tempDiv.querySelector('.amount').textContent = product.amount;
 
     // Agregar la tarjeta al contenedor
     container.appendChild(tempDiv.firstElementChild);

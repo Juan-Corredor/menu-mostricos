@@ -7,4 +7,3 @@ function pedido(contenedor) {
         element.style.display = 'none'
     }
 }
-

@@ -7,24 +7,27 @@
             "products": [
                 {
                     "idProduc": "combo1",
-                    "imgProduct": "./img/batido.png",
                     "name": "Nombre producto #1",
-                    "price": "10000",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/batido.png",
+                    "price": 10000,
+                    "amount": 0
                 },                
                 {
                     "idProduc": "combo2",
-                    "imgProduct": "./img/combo.png",
                     "name": "Nombre producto #2",
-                    "price": "20000",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/combo.png",
+                    "price": 20000,
+                    "amount": 0
                 },
                 {
                     "idProduc": "combo3",
-                    "imgProduct": "./img/batido.png",
                     "name": "Nombre producto #3",
-                    "price": "18000",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/batido.png",
+                    "price": 18000,
+                    "amount": 0
                 }
             ]
         },
@@ -34,17 +37,19 @@
             "products": [
                 {
                     "idProduc": "bebida01",
-                    "imgProduct": "./img/batido.png",
                     "name": "Nombre producto #1",
-                    "price": "15000",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/batido.png",
+                    "price": 15000,
+                    "amount": 0
                 },
                 {
                     "idProduc": "bebida02",
-                    "imgProduct": "./img/batido.png",
                     "name": "Nombre producto #2",
-                    "price": "22000",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/batido.png",
+                    "price": 22000,
+                    "amount": 0
                 }
             ]
         },
@@ -54,17 +59,19 @@
             "products": [
                 {
                     "idProduc": "Salchipapas01",
-                    "imgProduct": "./img/combo.png",
                     "name": "Nombre producto #1",
-                    "price": "15000",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/combo.png",
+                    "price": 15000,
+                    "amount": 0
                 },
                 {
                     "idProduc": "Salchipapas02",
-                    "imgProduct": "./img/combo.png",
                     "name": "Nombre producto #2",
-                    "price": "22000",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/combo.png",
+                    "price": 22000,
+                    "amount": 0
                 }
             ]
         }
