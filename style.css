@@ -217,7 +217,7 @@ header {
     align-items: center;
     text-align: center;
     /* width: 100%; */
-    padding: 0;
+    padding: 0 10px;
     margin: 0;
     height: 1.5cm;
 }
@@ -227,6 +227,7 @@ header {
     width: 100%;
     padding: 0 5px;
     justify-content: space-between;
+    overflow: auto;
 }
 
 .container_items_navegation a {
