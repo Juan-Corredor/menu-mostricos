@@ -65,14 +65,16 @@ function createProductCard(product, template, container) {
     tempDiv.querySelector('.quantity').textContent = product.quantity;
     tempDiv.querySelector('.quantity').id = `quantity-${product.productId}`;
 
+    let name = product.name;
     let price = product.price;
+    let observation = tempDiv.querySelector('.product-card__observations');
     let quantityElement = tempDiv.querySelector('.quantity');
     let decrementButton = tempDiv.querySelector('.minus_btn');
     let incrementButton = tempDiv.querySelector('.more_btn');
 
     // Asigna la función al evento onclick sin ejecutarla inmediatamente
-    decrementButton.addEventListener('click', () => subtractQuantity(quantityElement, price, decrementButton, incrementButton));
-    incrementButton.addEventListener('click', () => addQuantity(quantityElement, price, decrementButton, incrementButton));
+    decrementButton.addEventListener('click', () => subtractQuantity(name, observation, price, quantityElement, decrementButton, incrementButton));
+    incrementButton.addEventListener('click', () => addQuantity(name, observation, price, quantityElement, decrementButton, incrementButton));
 
     // Agregar la tarjeta al contenedor
     container.appendChild(tempDiv.firstElementChild);
