@@ -74,6 +74,9 @@ function subtractQuantity(name, observation, price, quantityElement, decrementBu
     }
 }
 
+// document.getElementById('testProduts').addEventListener('click', function() {
+//     console.log(order.products);
+// });
 
 document.getElementById('whatsappButton').addEventListener('click', function () {
     sendOrder();
@@ -86,20 +89,23 @@ function sendOrder() {
 
     order.products.forEach(product => {
         const subtotal = product.quantity * product.price;
-        message += `* *${product.name}: ${product.quantity}x*\n`;
+        message += `*${product.name}:* ${product.quantity}x\n`;
         
-        if (product.observation) message += ` *Observación:* ${product.observation}\n`;
+        if (product.observation) message += `*Observación:* _${product.observation}_\n`;
         
-        message += ` *Valor: $${product.price.toLocaleString()}*\n`;
-        message += ` *Subtotal: $${subtotal.toLocaleString()}*\n\n`;
+        message += `*_Valor:_* $${product.price.toLocaleString()}\n`;
+        message += `*_Subtotal:_* $${subtotal.toLocaleString()}\n\n`;
         total += subtotal;
     });
 
-    message += `*Total: $${total.toLocaleString()}*`;
+    message += `*Total:* $${total.toLocaleString()}`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
+
+    // Recargar la ventana original después de abrir la nueva
+    window.location.reload();
 }
 
 export {

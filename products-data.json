@@ -7,7 +7,7 @@
             "products": [
                 {
                     "productId": "combo1",
-                    "name": "Nombre producto #1",
+                    "name": "Hamburguesa sencilla",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/batido.png",
                     "price": 10000,
@@ -15,7 +15,7 @@
                 },                
                 {
                     "productId": "combo2",
-                    "name": "Nombre producto #2",
+                    "name": "Hamburguesa Mega",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/combo.png",
                     "price": 20000,
@@ -23,7 +23,7 @@
                 },
                 {
                     "productId": "combo3",
-                    "name": "Nombre producto #3",
+                    "name": "Hamburguesa ultra",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/batido.png",
                     "price": 18000,
@@ -37,7 +37,7 @@
             "products": [
                 {
                     "productId": "bebida01",
-                    "name": "Nombre producto #1",
+                    "name": "Batido de café",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/batido.png",
                     "price": 15000,
@@ -45,7 +45,7 @@
                 },
                 {
                     "productId": "bebida02",
-                    "name": "Nombre producto #2",
+                    "name": "Batido de oreo",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/batido.png",
                     "price": 22000,
@@ -59,7 +59,7 @@
             "products": [
                 {
                     "productId": "Salchipapas01",
-                    "name": "Nombre producto #1",
+                    "name": "Salchipapa pequeña",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/combo.png",
                     "price": 15000,
@@ -67,7 +67,7 @@
                 },
                 {
                     "productId": "Salchipapas02",
-                    "name": "Nombre producto #2",
+                    "name": "Salchipapa mediana",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
                     "imgProduct": "./img/combo.png",
                     "price": 22000,
