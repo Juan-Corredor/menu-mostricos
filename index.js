@@ -91,7 +91,7 @@ function sendOrder() {
         const subtotal = product.quantity * product.price;
         message += `*${product.name}:* ${product.quantity}x\n`;
         
-        if (product.observation) message += `*Observación:* _${product.observation}_\n`;
+        if (product.observation) message += `*Observación:* ${product.observation}\n`;
         
         message += `*Valor:* _$${product.price.toLocaleString()}_\n`;
         message += `*Subtotal:* _$${subtotal.toLocaleString()}_\n\n`;
