@@ -133,6 +133,7 @@ body {
     border-radius: 8px 8px 0 0;
     animation: slideUp 0.3s ease-out;
     color: #000;
+    z-index: 1;
 }
 
 @keyframes slideUp {
@@ -158,8 +159,7 @@ body {
     padding: 10px 20px;
     background-color: #25D366;
     color: #fff;
-    cursor: pointer;
-    z-index: 1;
+    cursor: pointer;    
 }
 .order-container__btnsend-container__btn:hover {
     background-color: #17823f;

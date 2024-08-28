@@ -93,12 +93,12 @@ function sendOrder() {
         
         if (product.observation) message += `*Observación:* _${product.observation}_\n`;
         
-        message += `*_Valor:_* $${product.price.toLocaleString()}\n`;
-        message += `*_Subtotal:_* $${subtotal.toLocaleString()}\n\n`;
+        message += `*Valor:* _$${product.price.toLocaleString()}_\n`;
+        message += `*Subtotal:* _$${subtotal.toLocaleString()}_\n\n`;
         total += subtotal;
     });
 
-    message += `*Total:* $${total.toLocaleString()}`;
+    message += `*Total:* _$${total.toLocaleString()}_`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
