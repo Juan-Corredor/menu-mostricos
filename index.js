@@ -89,10 +89,9 @@ function sendOrder() {
 
     order.products.forEach(product => {
         const subtotal = product.quantity * product.price;
-        message += `*${product.name}:* ${product.quantity}x\n`;
-        
-        if (product.observation) message += `*Observación:* ${product.observation}\n`;
-        
+        message += `*${product.name}*\n`;
+        message += `*Cantidad:* _${product.quantity}_\n`;        
+        if (product.observation) message += `*Observación:* ${product.observation}\n`;        
         message += `*Valor:* _$${product.price.toLocaleString()}_\n`;
         message += `*Subtotal:* _$${subtotal.toLocaleString()}_\n\n`;
         total += subtotal;
