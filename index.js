@@ -1,53 +1,51 @@
 let totalAmount = 0;
+const PHONE_NUMBER = "573113461855";
 const totalElement = document.getElementById('total');
 const orderContainer = document.getElementById('order_container');
 const order = { products: [] };
+
+function updateUI(quantityElement, decrementButton, incrementButton) {
+    updateOrderContainerDisplay();
+    updateTotalAmountDisplay();
+    decrementButton.classList.toggle('blocked', quantityElement.textContent <= 0);
+    incrementButton.classList.toggle('add-product', quantityElement.textContent > 0);
+}
 
 function updateOrderContainerDisplay() {
     orderContainer.style.display = totalAmount > 0 ? 'grid' : 'none';
 }
 
 function updateTotalAmountDisplay() {
-    totalElement.textContent = `$ ${totalAmount.toLocaleString('es-ES')}`;
+    totalElement.textContent = `$ ${totalAmount.toLocaleString()}`;
 }
 
-function updateProduct(name, observation, price, quantityElement) {
+function updateProduct(name, img, observation, price, quantityElement) {
     let existingProduct = order.products.find(product => product.name === name);
     if (existingProduct) {
-        // Si el producto ya existe, actualiza la cantidad y la observación
         existingProduct.quantity = quantityElement.textContent;
         existingProduct.observation = observation.value;
     } else {
-        // Si el producto no existe, lo agrega al array
         let product = {
             name: name,
+            img: img,
             quantity: quantityElement.textContent,
             price: price,
-            observation: ''
+            observation: observation.value
         };
 
-        observation.addEventListener('input', function () { product.observation = observation.value;});
+        observation.addEventListener('input', function () { product.observation = observation.value; });
         order.products.push(product);
     }
 };
 
-function addQuantity(name, observation, price, quantityElement, decrementButton, incrementButton) {
-    // Actualiza la cantidad antes de hacer el push
+function addQuantity(name, img, observation, price, quantityElement, decrementButton, incrementButton) {
     quantityElement.textContent++;
-        
-    // Actualiza el monto total, el producto y la interfaz
     totalAmount += price;
-    updateProduct(name, observation, price, quantityElement);
-    updateOrderContainerDisplay();
-    updateTotalAmountDisplay();
-
-    if (quantityElement.textContent > 0) {
-        decrementButton.classList.remove('blocked');
-        incrementButton.classList.add('add-product');
-    }
+    updateProduct(name, img, observation, price, quantityElement);
+    updateUI(quantityElement, decrementButton, incrementButton);
 }
 
-function subtractQuantity(name, observation, price, quantityElement, decrementButton, incrementButton) {
+function subtractQuantity(name, img, observation, price, quantityElement, decrementButton, incrementButton) {
     let existingProduct = order.products.find(product => product.name === name);
 
     if (quantityElement.textContent > 0) {
@@ -55,43 +53,78 @@ function subtractQuantity(name, observation, price, quantityElement, decrementBu
         totalAmount -= price;
 
         if (existingProduct) {
-            // Actualiza la cantidad en el producto existente
             existingProduct.quantity = quantityElement.textContent;
-
-            // Si la cantidad llega a 0, elimina el producto de la lista
-            if (existingProduct.quantity <= 0) {
-                order.products = order.products.filter(product => product.name !== name);
-            }
+            if (existingProduct.quantity <= 0) order.products = order.products.filter(product => product.name !== name);
         }
-
-        updateOrderContainerDisplay();
-        updateTotalAmountDisplay();
-
-        if (quantityElement.textContent <= 0) {
-            decrementButton.classList.add('blocked');
-            incrementButton.classList.remove('add-product');
-        }
+        updateUI(quantityElement, decrementButton, incrementButton);
     }
 }
 
-// document.getElementById('testProduts').addEventListener('click', function() {
-//     console.log(order.products);
-// });
 
-document.getElementById('whatsappButton').addEventListener('click', function () {
-    sendOrder();
-});
+function clearModalContainer() {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+}
+
+function showModal() {
+    modal.style.display = "flex";
+    modal.style.alignItems = "center";
+    modal.style.justifyContent = "center";
+    document.body.className = "modal-open";
+
+    const modalContainer = document.getElementById("modalContainer");
+    const templateModal = document.getElementById("modalviewpart");
+    modalContainer.innerHTML = ''; // Limpiar el contenedor de la modal antes de añadir los nuevos elementos
+
+    order.products.forEach(product => {
+        // Clonar la estructura de la modal
+        const modalClone = templateModal.cloneNode(true);
+        const subtotal = product.quantity * product.price;
+
+        modalClone.querySelector(".name-product").textContent = product.name;
+        modalClone.querySelector(".img-product").src = product.img;
+        modalClone.querySelector(".quantity-product").textContent = product.quantity;
+
+        if (product.observation) {
+            modalClone.querySelector(".observation-product").style.display = "flex";
+            modalClone.querySelector(".observation-product").textContent = `Observación: ${product.observation}`;
+        } else {
+            modalClone.querySelector(".observation-product").style.display = "none";
+        }
+
+        modalClone.querySelector(".price-product").textContent = `Subtotal: $${product.price.toLocaleString()}`;
+        modalClone.querySelector(".subtotal-product").textContent = `Subtotal: $${subtotal.toLocaleString()}`;
+        modalContainer.appendChild(modalClone);
+    });
+
+    templateModal.remove();
+    document.getElementById("total-amount").textContent = `TOTAL: $${totalAmount.toLocaleString()}`;
+}
+
+const modal = document.getElementById("myModal");
+const cancelFooter = document.getElementById("cancel-btn");
+const btn = document.getElementById("openModalBtn");
+const span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function () { showModal(); }
+span.onclick = function () { clearModalContainer() };
+cancelFooter.onclick = function () { clearModalContainer() };
+
+window.onclick = function (event) {
+    if (event.target == modal) clearModalContainer();
+}
+
+document.getElementById('whatsappButton').addEventListener('click', sendOrder);
 
 function sendOrder() {
-    const phoneNumber = "573113461855";
     let message = `Quiero hacer un pedido:\n\n`;
     let total = 0;
 
     order.products.forEach(product => {
         const subtotal = product.quantity * product.price;
         message += `*${product.name}*\n`;
-        message += `*Cantidad:* _${product.quantity}_\n`;        
-        if (product.observation) message += `*Observación:* ${product.observation}\n`;        
+        message += `*Cantidad:* _${product.quantity}_\n`;
+        if (product.observation) message += `*Observación:* ${product.observation}\n`;
         message += `*Valor:* _$${product.price.toLocaleString()}_\n`;
         message += `*Subtotal:* _$${subtotal.toLocaleString()}_\n\n`;
         total += subtotal;
@@ -100,12 +133,11 @@ function sendOrder() {
     message += `*Total:* _$${total.toLocaleString()}_`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
-
-    // Recargar la ventana original después de abrir la nueva
     window.location.reload();
 }
+
 
 export {
     addQuantity,
