@@ -163,7 +163,7 @@
      <!-- Botón para abrir la ventana modal -->
      <button id="openModalBtn">Abrir Modal</button>
     <!-- Contenedor de la ventana modal -->
-    <div class="modal">
+    <div id="myModal" class="modal">
         <article class="modal-content">
             <section class="modal-content__header">
                 <span class="close">&times;</span>
@@ -247,7 +247,8 @@
 </body>
 <script>
     // Obtiene el modal    
-    var modal = document.getElementById("myModal");    
+    var modal = document.getElementById("myModal");
+
     var cancelFooter = document.getElementById("cancel-btn");
 
     // Obtiene el botón que abre el modal
@@ -269,7 +270,7 @@
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
     }
-
+     
     cancelFooter.onclick = function () {
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
