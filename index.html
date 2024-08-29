@@ -11,6 +11,11 @@
 </head>
 
 <style>
+
+    body.modal-open {
+        overflow: hidden; /* Evita el desplazamiento */
+    }
+
     /* Estilos para la ventana modal */
     .modal {
         display: none;
@@ -126,7 +131,7 @@
         border: 1px solid #888;
     }
 </style>
-<body>
+<body >
     <nav id="navbar" class="sticky">
         <section id="nav-section-menu" class="nav-section">
             <a id="defaultBtnNavegation1" href="#hamburguesas" class="link">Hamburguesas</a>
@@ -156,9 +161,9 @@
 
     </main>
      <!-- Botón para abrir la ventana modal -->
-     <!-- <button id="openModalBtn">Abrir Modal</button> -->
+     <button id="openModalBtn">Abrir Modal</button>
     <!-- Contenedor de la ventana modal -->
-    <div id="myModal" class="modal">
+    <div class="modal">
         <article class="modal-content">
             <section class="modal-content__header">
                 <span class="close">&times;</span>
@@ -241,9 +246,8 @@
     <script src="setData.js"  type="module"></script>
 </body>
 <script>
-    // Obtiene el modal
-    var modal = document.getElementById("myModal");
-    var cancel = document.getElementById("cancel");
+    // Obtiene el modal    
+    var modal = document.getElementById("myModal");    
     var cancelFooter = document.getElementById("cancel-btn");
 
     // Obtiene el botón que abre el modal
@@ -257,21 +261,25 @@
         modal.style.display = "flex";
         modal.style.alignItems = "center";
         modal.style.justifyContent = "center";
+        document.body.className = "modal-open";
     }
 
     // Cuando el usuario hace clic en <span> (x), cierra el modal
     span.onclick = function () {
         modal.style.display = "none";
+        document.body.classList.remove("modal-open");
     }
 
     cancelFooter.onclick = function () {
         modal.style.display = "none";
+        document.body.classList.remove("modal-open");
     }
-
+    
     // Cuando el usuario hace clic fuera del modal, lo cierra
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            document.body.classList.remove("modal-open");
         }
     }
 </script>
