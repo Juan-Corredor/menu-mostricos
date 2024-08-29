@@ -9,6 +9,123 @@
     <link rel="stylesheet" href="style.css">
     <title>Menu Mostricos</title>
 </head>
+
+<style>
+    /* Estilos para la ventana modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Contenido de la ventana modal */
+    .modal-content {
+        display: grid;
+        align-content: space-around;   
+        background-color: #fff;
+        border-radius: 15px;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 84%;
+        height: 16cm;
+        max-width: 600px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Estilos para el botón de cierre */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 30px;
+    }
+
+    .modal-content__detail-order-content {
+        width: 100%;
+        height: 10cm;
+        overflow: hidden;
+        overflow-y: scroll;
+        /* margin: 40px 0; */
+    }
+
+    .modal-content__detail-product-content {
+        width: 100%;
+        /* height: 4cm; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #9c9c9c;
+        margin-bottom: 20px;
+    }
+    .modal-content__detail-product-content_img-product {
+        width: 20%;    
+    }
+    .modal-content__detail-product-content_info-product {
+        width: 80%;
+        font-size: 14px;
+        padding: 0 0 0 15px;
+    }
+
+    .modal-content__detail-product-content_info-product .observation {
+        color: #4d4d4d;
+    }
+    .modal-content__detail-product-content_info-product p {
+        margin: 0;        
+    }
+
+    .modal-content__detail-product-content_img-product img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .modal-content__detail-product-content_info-product__header {
+        width: 100%;
+        display: flex;
+        font-size: 14px;
+        font-weight: bold;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .modal-content__detail-product-content_info-product__header span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        text-align: center;
+        background-color: #fcba1b;
+        font-size: 15px;
+        color: #491ca2;
+        padding: 6px;
+        margin-left: 8px;
+    }
+
+    .modal-content__footer {
+        display: grid;
+        align-content: space-evenly;
+        width: 100%;
+        height: 4cm;
+    }
+    .modal-content__footer__btn-options {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .order-container__btnsend-container__btn.cancel{
+        background-color: #fff;
+        color: #4d4d4d;
+        border: 1px solid #888;
+    }
+</style>
 <body>
     <nav id="navbar" class="sticky">
         <section id="nav-section-menu" class="nav-section">
@@ -38,14 +155,124 @@
         </section>
 
     </main>
+     <!-- Botón para abrir la ventana modal -->
+     <button id="openModalBtn">Abrir Modal</button>
+    <!-- Contenedor de la ventana modal -->
+    <div id="myModal" class="modal">
+        <article class="modal-content">
+            <section class="modal-content__header">
+                <span class="close">&times;</span>
+                <h2>Resumen del pedido</h2>
+            </section>
+            <section class="modal-content__detail-order-content">
+                <div class="modal-content__detail-product-content">
+                    <div class="modal-content__detail-product-content_img-product">
+                        <img src="./img/combo.png" alt="img product">
+                    </div>
+                    <div class="modal-content__detail-product-content_info-product">
+                        <div class="modal-content__detail-product-content_info-product__header">
+                            <p>Producto nombres</p>
+                            <span>13</span>
+                        </div>
+                        <p class="observation">observación: Sin lorem</p>
+                        <p>Precio: $12.000</p>
+                        <p>Subtotal: $12.000</p>
+                    </div>
+                </div>          
+                <div class="modal-content__detail-product-content">
+                    <div class="modal-content__detail-product-content_img-product">
+                        <img src="./img/combo.png" alt="img product">
+                    </div>
+                    <div class="modal-content__detail-product-content_info-product">
+                        <div class="modal-content__detail-product-content_info-product__header">
+                            <p>Producto nombres</p>
+                            <span>13</span>
+                        </div>
+                        <p class="observation">observación: Sin lorem</p>
+                        <p>Precio: $12.000</p>
+                        <p>Subtotal: $12.000</p>
+                    </div>
+                </div>          
+                <div class="modal-content__detail-product-content">
+                    <div class="modal-content__detail-product-content_img-product">
+                        <img src="./img/combo.png" alt="img product">
+                    </div>
+                    <div class="modal-content__detail-product-content_info-product">
+                        <div class="modal-content__detail-product-content_info-product__header">
+                            <p>Producto nombres</p>
+                            <span>13</span>
+                        </div>
+                        <p class="observation">observación: Sin lorem</p>
+                        <p>Precio: $12.000</p>
+                        <p>Subtotal: $12.000</p>
+                    </div>
+                </div>          
+                <div class="modal-content__detail-product-content">
+                    <div class="modal-content__detail-product-content_img-product">
+                        <img src="./img/combo.png" alt="img product">
+                    </div>
+                    <div class="modal-content__detail-product-content_info-product">
+                        <div class="modal-content__detail-product-content_info-product__header">
+                            <p>Producto nombres</p>
+                            <span>13</span>
+                        </div>
+                        <p class="observation">observación: Sin lorem</p>
+                        <p>Precio: $12.000</p>
+                        <p>Subtotal: $12.000</p>
+                    </div>
+                </div>          
+            </section>
+            <section class="modal-content__footer">
+                <h3>Total: $20.000</h3>
+    
+                <div class="modal-content__footer__btn-options">
+                    <div class="order-container__btnsend-container__btn cancel" id="cancel-btn"><span>Cancelar</span></div>
+                    <div class="order-container__btnsend-container__btn"><span><i class="bi bi-whatsapp"></i> Finalizar pedido</span></div>
+                </div>
+            </section>
+        </article>
+    </div>
 
     <footer style="background-color: #491ca2; height: 5cm; margin-top: 2cm;">
-
     </footer>
 
     <script src="index.js" type="module"></script>
     <script src="navigation-features.js" type="module"></script>
     <script src="setData.js"  type="module"></script>
 </body>
+<script>
+    // Obtiene el modal
+    var modal = document.getElementById("myModal");
+    var cancel = document.getElementById("cancel");
+    var cancelFooter = document.getElementById("cancel-btn");
 
+    // Obtiene el botón que abre el modal
+    var btn = document.getElementById("openModalBtn");
+
+    // Obtiene el elemento <span> que cierra el modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Cuando el usuario hace clic en el botón, abre el modal
+    btn.onclick = function () {
+        modal.style.display = "flex";
+        modal.style.alignItems = "center";
+        modal.style.justifyContent = "center";
+    }
+
+    // Cuando el usuario hace clic en <span> (x), cierra el modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    cancelFooter.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Cuando el usuario hace clic fuera del modal, lo cierra
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 </html>
