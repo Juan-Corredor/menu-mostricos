@@ -103,10 +103,10 @@ function showModal() {
 
 const modal = document.getElementById("myModal");
 const cancelFooter = document.getElementById("cancel-btn");
-const btn = document.getElementById("openModalBtn");
+//const btn = document.getElementById("openModalBtn");
 const span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function () { showModal(); }
+//btn.onclick = function () { showModal(); }
 span.onclick = function () { clearModalContainer() };
 cancelFooter.onclick = function () { clearModalContainer() };
 
