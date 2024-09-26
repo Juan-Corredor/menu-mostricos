@@ -39,7 +39,7 @@
         },
         {
             "name": "Otras opciones",
-            "categoryId": "otras_opciones",
+            "categoryId": "otrasopciones",
             "products": [
                 {
                     "productId": "cono-barril",
