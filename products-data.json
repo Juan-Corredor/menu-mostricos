@@ -2,74 +2,129 @@
     "total-quantity": "10000",
     "categorys": [
         {
-            "name": "Hamburguesas",
-            "categoryId": "hamburguesas",
-            "products": [
-                {
-                    "productId": "combo1",
-                    "name": "Hamburguesa sencilla",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-                    "imgProduct": "./img/batido.png",
-                    "price": 10000,
-                    "quantity": 0
-                },                
-                {
-                    "productId": "combo2",
-                    "name": "Hamburguesa Mega",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-                    "imgProduct": "./img/combo.png",
-                    "price": 20000,
-                    "quantity": 0
-                },
-                {
-                    "productId": "combo3",
-                    "name": "Hamburguesa ultra",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-                    "imgProduct": "./img/batido.png",
-                    "price": 18200,
-                    "quantity": 0
-                }
-            ]
-        },
-        {
-            "name": "Bebidas",
-            "categoryId": "bebidas",
-            "products": [
-                {
-                    "productId": "bebida01",
-                    "name": "Batido de café",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-                    "imgProduct": "./img/batido.png",
-                    "price": 15000,
-                    "quantity": 0
-                },
-                {
-                    "productId": "bebida02",
-                    "name": "Batido de oreo",
-                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-                    "imgProduct": "./img/batido.png",
-                    "price": 22000,
-                    "quantity": 0
-                }
-            ]
-        },
-        {
             "name": "Salchipapas",
             "categoryId": "salchipapas",
             "products": [
                 {
-                    "productId": "Salchipapas01",
-                    "name": "Salchipapa pequeña",
+                    "productId": "salchi-putin",
+                    "name": "Salchi putin",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-                    "imgProduct": "./img/combo.png",
+                    "imgProduct": "./img/salchi-putin.png",
+                    "price": 15000,
+                    "quantity": 0
+                }               
+            ]
+        },
+        {
+            "name": "Hamburguesas",
+            "categoryId": "hamburguesas",
+            "products": [
+                {
+                    "productId": "clasica",
+                    "name": "Hamburguesa clasica",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/Hamburguesa-clasica.png",
+                    "price": 10000,
+                    "quantity": 0
+                },                
+                {
+                    "productId": "conPollo",
+                    "name": "Hamburguesa con pollo",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/Hamburguesa-de-pollo.png",
+                    "price": 20000,
+                    "quantity": 0
+                }
+            ]
+        },
+        {
+            "name": "Otras opciones",
+            "categoryId": "otras_opciones",
+            "products": [
+                {
+                    "productId": "cono-barril",
+                    "name": "Cono barril",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/cono-barril.png",
+                    "price": 10000,
+                    "quantity": 0
+                },  
+                {
+                    "productId": "cono-ranchero",
+                    "name": "Cono ranchero",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/cono-ranchero.png",
+                    "price": 10000,
+                    "quantity": 0
+                },
+                {
+                    "productId": "crispi-pollo",
+                    "name": "Crispi pollo",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/crispi-pollo.png",
+                    "price": 10000,
+                    "quantity": 0
+                },              
+                {
+                    "productId": "combo-mostroso",
+                    "name": "Combo mostroso",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/combo-mostroso.png",
+                    "price": 10000,
+                    "quantity": 0
+                },              
+                {
+                    "productId": "combo-mostroso-2",
+                    "name": "Combo mostroso 2",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/combo-mostroso-2.png",
+                    "price": 10000,
+                    "quantity": 0
+                },              
+                {
+                    "productId": "perros-y-cervezas",
+                    "name": "Perros y cervezas",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/perro-y-cervezas.png",
+                    "price": 10000,
+                    "quantity": 0
+                }              
+                
+            ]
+        },             
+        {
+            "name": "Malteadas",
+            "categoryId": "malteadas",
+            "products": [
+                {
+                    "productId": "nucita",
+                    "name": "Malteada de nucita",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/malteada-nucita.png",
                     "price": 15000,
                     "quantity": 0
                 },
                 {
-                    "productId": "Salchipapas02",
-                    "name": "Salchipapa mediana",
+                    "productId": "oreo",
+                    "name": "Malteada de oreo",
                     "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-                    "imgProduct": "./img/combo.png",
+                    "imgProduct": "./img/malteada-oreo.png",
+                    "price": 22000,
+                    "quantity": 0
+                },
+                {
+                    "productId": "polet",
+                    "name": "Malteada polet",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/malteada-polet.png",
+                    "price": 22000,
+                    "quantity": 0
+                },
+                {
+                    "productId": "wafflet",
+                    "name": "Malteada de wafflet",
+                    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+                    "imgProduct": "./img/malteada-waffle.png",
                     "price": 22000,
                     "quantity": 0
                 }

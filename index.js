@@ -92,7 +92,7 @@ function showModal() {
             modalClone.querySelector(".observation-product").style.display = "none";
         }
 
-        modalClone.querySelector(".price-product").textContent = `Subtotal: $${product.price.toLocaleString()}`;
+        modalClone.querySelector(".price-product").textContent = `Precio: $${product.price.toLocaleString()}`;
         modalClone.querySelector(".subtotal-product").textContent = `Subtotal: $${subtotal.toLocaleString()}`;
         modalContainer.appendChild(modalClone);
     });
@@ -103,10 +103,10 @@ function showModal() {
 
 const modal = document.getElementById("myModal");
 const cancelFooter = document.getElementById("cancel-btn");
-//const btn = document.getElementById("openModalBtn");
+const btn = document.getElementById("openModalBtn");
 const span = document.getElementsByClassName("close")[0];
 
-//btn.onclick = function () { showModal(); }
+btn.onclick = function () { showModal(); }
 span.onclick = function () { clearModalContainer() };
 cancelFooter.onclick = function () { clearModalContainer() };
 
