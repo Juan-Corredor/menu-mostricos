@@ -1,5 +1,5 @@
 let totalAmount = 0;
-const PHONE_NUMBER = "573113461855";
+const PHONE_NUMBER = "573157053542";
 const totalElement = document.getElementById('total');
 const orderContainer = document.getElementById('order_container');
 const order = { products: [] };

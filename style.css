@@ -12,6 +12,7 @@ body {
     color: #fff;
     margin: 0 15px;
     margin-top: 2cm;
+    background-image: url(Pagina/patron-1.svg);
 }
 
 /* #region STYLES product-card */
